@@ -122,6 +122,15 @@ return [
     'key' => env('APP_KEY'),
 
     'cipher' => 'AES-256-CBC',
+    
+    /*
+    |--------------------------------------------------------------------
+    | Display Error Log on your Heroku dashboard
+    |--------------------------------------------------------------------
+    | With this, you can view your app error log on your Heroku dashboard.
+    | Save and git add and commit.
+    */
+    'log' => 'errorlog',
 
     /*
     |--------------------------------------------------------------------------
