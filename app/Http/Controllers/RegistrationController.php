@@ -8,7 +8,7 @@ class RegistrationController extends Controller
 {
     public function create()
     {
-        return view('signup');
+        return view('signup')->with('title', 'sign-up');
     }
 
     public function store()

@@ -8,9 +8,9 @@
 				<h1>Login</h1>
 			</div>
 			<div class="login-block">
-				<form>
-					<input type="text" name="email" placeholder="Enter Your Email" required="">
-					<input type="password" name="password" class="lock" placeholder="Enter your Password">
+				<form method="POST" action="/login">
+					<input type="text" name="email" placeholder="Enter Your Email" required>
+					<input type="password" name="password" class="lock" placeholder="Enter your Password" required>
 					<div class="forgot-top-grids">
 						<div class="forgot-grid">
 							<ul>
