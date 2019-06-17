@@ -3,12 +3,23 @@
 @section('content')
 
 <div class="login-page">
-    <div class="login-main">  	
-    	 <div class="login-head">
-				<h1>Login</h1>
-			</div>
-			<div class="login-block">
-				<form method="POST" action="/login">
+	
+    <div class="login-main">
+		  	
+    	<div class="login-head">
+			<h1>Login</h1>
+		</div>
+		<div class="login-block">
+			<form method="POST" action="/login">
+						{{ csrf_field() }}
+					@if(count($errors))
+						<div class="alert alert-danger">
+                            <i class="fa fa-warning fa-lg"></i>&nbsp;&nbsp;
+                                @foreach ($errors->all() as $message)
+                                    {{$message}}
+                                @endforeach         
+						</div>
+					@endif 
 					<input type="text" name="email" placeholder="Enter Your Email" required>
 					<input type="password" name="password" class="lock" placeholder="Enter your Password" required>
 					<div class="forgot-top-grids">

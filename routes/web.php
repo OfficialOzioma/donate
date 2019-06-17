@@ -21,4 +21,4 @@ Route::get('/register', 'RegistrationController@create');
 Route::post('/register', 'RegistrationController@store');
 
 Route::get('/dashboard', 'dashboardController@index')->name('home');
-Route::get('/dashboard/logout', 'signinController@destroy');
+Route::get('/dashboard/logout', 'dashboardController@destroy');

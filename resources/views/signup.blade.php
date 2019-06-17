@@ -19,7 +19,6 @@
                                 @foreach ($errors->get('name') as $message)
                                     {{$message}}
                                 @endforeach
-                                
                             </div> 
                         </div>
                     @endif

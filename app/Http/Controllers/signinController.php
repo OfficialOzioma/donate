@@ -18,16 +18,13 @@ class signinController extends Controller
     public function store()
     {
       if(! auth()->attempt(request(['email', 'password'])) ){
-          return back();
+          return back()->withErrors([
+              'message' => 'Incorrect email or password, Please Try again'
+          ]);
       }
 
       return redirect()->home();
     }
 
-    public function destroy()
-    {
-        auth()->logout();
-
-        return redirect('/');
-    }
+    
 }
